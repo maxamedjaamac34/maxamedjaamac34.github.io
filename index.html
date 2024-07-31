@@ -1,33 +1,86 @@
 <!DOCTYPE html>
 
-<html>
+<html  lang="en-US">
 <head>
+  <meta charset="utf-8"/>
+
 <title>Selling Cars</title>
+<link rel="icon" href = "car.jpg"/>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="script.js" defer></script>
+
 </head>
 
 <body>
+
 <h1>Welcome to my page</h1>
 
 <p> my cars are <strong>very </strong>good </p>
 
-<figure>
+<figure class="description">
 <img src = "car.jpg" width="200" height="200"/>
 <figcaption>
-on the picture above, a car was sold on a good price.
+<em>on the picture above, a car was sold on a good price.</em>
 </figcaption>
 
 </figure>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/f5tCvZcScZQ?si=-i4n3BigyV2dlO4A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<table>
-<tr>
-<td>1</td> 
-<td>2</td>
-<td>3</td>
-</tr>
 
-</table>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_JP8fgylPJo?si=J2QzefMiHv6NZ8HS"
+ title="YouTube video player" frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-<p class="second paragraph">I sell cars of all types of casr </p>
+<p class="description">Car salespeople help customers buy vehicles, maintenance plans, 
+  and warranties. <br>They may also sell accessories and other services. 
+  Their responsibilities include</p>
+<ul class="description">
+    <li><em> Honda </em></li>
+    <li><em> Subaru </em></li>
+    <li class="special"> <em> Jeeps </em></li>
+</ul>
+
+<ol class="description">
+<li>20,000 for Hondas</li>
+<li class="special">25,000 for Subaru</li>
+<li>30,000 for Jeeps</li>
+</ol>
+
+<p> Go to this Website
+    <a href="https://automobiles.honda.com/"> Car's Website</a>
+  </p>
+
+<p class="second paragraph">I sell cars of all types </p>
+
+<article>
+  This is the last paragraph I have.<br> I am gonna add some style to it. 
+  I am going to add flexing to my article
+</article>
+
+<article>
+  This is the last paragraph I have.<br> I am gonna add some style to it. 
+  I am going to add flexing to my article
+</article>
+
+<article>
+  This is the last paragraph I have. <br>I am gonna add some style to it. 
+  I am going to add flexing to my articles.
+</article>
+
+
+
+
+<div id="game-container">
+<h1> Number Guessing Game</h1>
+<p>guess a number between 1 and 100</p>
+<input type="number" id="guess-input" min="1" max="100">
+<button onclick="makeGuess()"> Guess</button>
+<p id="message"></p>
+
+</div>
+
+
 
 </body>
 
