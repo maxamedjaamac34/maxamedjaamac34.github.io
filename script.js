@@ -73,3 +73,29 @@
 
     randomNumber = Math.floor(Math.random() * 100) + 1;
   }
+
+
+
+
+
+
+
+  let count = 0;
+  const counterElement = document.getElementById('counter');
+
+  function increaseCounter() {
+      count++; // Increment the counter
+      if(count === 20){
+          alert("wow! you won 10 points");
+          count += 10;
+      }
+      else if (count ===10){
+          const randompoints = Math.floor(Math.random() * 100) + 1;
+          count += randompoints;
+      }
+      counterElement.textContent = count; // this to update the counter display
+  }
+  function resetCounter() {
+      count = 0; // this resets the counter
+      counterElement.textContent = count; //this also to update the counter
+  }
