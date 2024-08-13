@@ -78,6 +78,7 @@
 
 
 
+//clicker game
 
 
   let count = 0;

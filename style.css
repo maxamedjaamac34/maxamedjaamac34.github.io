@@ -1,33 +1,12 @@
 
     
     h1{
-    color: blue;
+    color: rgb(14, 14, 54);
 }
 
 body{
     background-color: linear-gradient(red, yellow);
 
-}
-ul, p {
-    color: blue;
-}
-ol{
-    color: magenta;
-}
-li{
-    list-style-type: none;
-}
-
-li.special{
-    color: rgb(27, 77, 46);
-}
-
-li em {
-    font-size: 30px;
-}
-
-h1 + p{
-    text-align: center;
 }
 
 a:link {
@@ -43,37 +22,13 @@ a:hover {
     color: red;
 }
 
-a{
-    text-align: right;
-}
 ul{
     letter-spacing: 20px;
     transform: capitalize;
     text-shadow: 5px 5px 5px;
     font-weight: bold;
 }
-.description{
-    background-color: lightgreen;
-    text-align: center;
-    border: 2px solid black;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 10px;
-   
-    
-}
-article{
-    flex: 1 200px;
-    background-color: lightslategrey;
-    text-align: center;
-    border: 2px solid black;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px;
-}
-article:nth-of-type(3){
-    flex: 2 200px;
-}
+
 iframe{
     position: absolute;
     top: 50%;
@@ -82,3 +37,5 @@ iframe{
     width: 50%;
 
 }
+table, th, td {
+    border: 1px solid black;
