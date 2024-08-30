@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8; /* Off white */
+            margin: 0;
+            padding: 0;
+        }
+
+        .header-title {
+            text-align: center;
+            font-size: 36px;
+            margin: 20px 0;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #e0e0e0;
+            padding: 10px 20px;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar li {
+            margin: 0 15px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .container {
+            padding: 20px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .profile-pic img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .description {
+            max-width: 600px;
+        }
+
+        .description h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .description p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-top: 10px;
+        }
+
+        .socials {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .socials a {
+            margin: 0 10px;
+            color: #333;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #e0e0e0;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Title -->
+    <div class="header-title">
+        My Website
+    </div>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <ul>
+            <li><a href="#me">Me</a></li>
+            <li><a href="#job-experience">Job Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="profile-pic">
+            <img src="profile_pic.jpeg" alt="Profile Picture" />
+        </div>
+        <div class="description">
+            <h1>About Me</h1>
+            <p>Hi, I am [Your Name], a passionate developer with a love for creating impactful projects. With experience in both front-end and back-end development, I am constantly learning and improving my skills. Welcome to my personal website!</p>
+        </div>
+    </div>
+
+    <!-- Socials -->
+    <div class="socials">
+        <a href="https://github.com" target="_blank">GitHub</a>
+        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+        <a href="https://twitter.com" target="_blank">Twitter</a>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>© 2024 [Your Name]. All rights reserved.</p>
+    </div>
+
+    <script>
+        // JavaScript for smooth scrolling between sections
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

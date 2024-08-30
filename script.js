@@ -1,4 +1,17 @@
 
+
+         // JavaScript for smooth scrolling between sections
+         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+              e.preventDefault();
+              document.querySelector(this.getAttribute('href')).scrollIntoView({
+                  behavior: 'smooth'
+              });
+          });
+      });
+
+
+  
   let randomNumber = Math.floor(Math.random() * 100) + 1;
 
   const guesses = document.querySelector('.guesses');
@@ -100,3 +113,106 @@
       count = 0; // this resets the counter
       counterElement.textContent = count; //this also to update the counter
   }
+
+  //tic-tac-toe game
+
+
+  const cells = document.querySelectorAll('.cell');
+  const statusText = document.querySelector('.status');
+  const restartButton = document.getElementById('restartButton');
+  let currentPlayer = 'X';
+  let board = ['', '', '', '', '', '', '', '', ''];
+  let gameActive = true;
+  
+  const winningConditions = [
+      [0, 1, 2],
+      [3, 4, 5],
+      [6, 7, 8],
+      [0, 3, 6],
+      [1, 4, 7],
+      [2, 5, 8],
+      [0, 4, 8],
+      [2, 4, 6]
+  ];
+  
+  function handleCellClick(event) {
+      const cell = event.target;
+      const cellIndex = parseInt(cell.getAttribute('data-index'), 10);
+  
+      if (board[cellIndex] !== '' || !gameActive) return;
+  
+      updateCell(cell, cellIndex);
+      checkWinner();
+  }
+  
+  function updateCell(cell, index) {
+      board[index] = currentPlayer;
+      cell.textContent = currentPlayer;
+  }
+  
+  function checkWinner() {
+      let roundWon = false;
+  
+      for (let i = 0; i < winningConditions.length; i++) {
+          const condition = winningConditions[i];
+          const a = board[condition[0]];
+          const b = board[condition[1]];
+          const c = board[condition[2]];
+  
+          if (a === '' || b === '' || c === '') continue;
+  
+          if (a === b && b === c) {
+              roundWon = true;
+              break;
+          }
+      }
+  
+      if (roundWon) {
+          statusText.textContent = `${currentPlayer} wins!`;
+          gameActive = false;
+          return;
+      }
+  
+      if (!board.includes('')) {
+          statusText.textContent = "It's a draw!";
+          gameActive = false;
+          return;
+      }
+  
+      currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+      statusText.textContent = `It's ${currentPlayer}'s turn`;
+  }
+  
+  function restartGame() {
+      currentPlayer = 'X';
+      board = ['', '', '', '', '', '', '', '', ''];
+      gameActive = true;
+      statusText.textContent = `It's ${currentPlayer}'s turn`;
+      cells.forEach(cell => cell.textContent = '');
+  }
+  
+  cells.forEach(cell => cell.addEventListener('click', handleCellClick));
+  restartButton.addEventListener('click', restartGame);
+  
+  statusText.textContent = `It's ${currentPlayer}'s turn`;
+  
+
+
+
+
+// Dynamic year in the footer
+document.addEventListener("DOMContentLoaded", function() {
+  const yearSpan = document.getElementById("year");
+  const currentYear = new Date().getFullYear();
+  yearSpan.textContent = currentYear;
+});
+
+// Smooth scroll for navigation
+document.querySelectorAll('nav a').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+      });
+  });
+});
