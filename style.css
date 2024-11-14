@@ -9,6 +9,8 @@ body {
     background-color: #f8f8f8; /* Off white */
     margin: 0;
     padding: 0;
+    padding: 0 20px; /* 20px padding on the left and right sides */
+    box-sizing: border-box; /* Ensures padding is within the content width */
 }
 
 .header-title {
@@ -71,12 +73,29 @@ body {
     line-height: 1.5;
     margin-top: 10px;
 }
-
-.socials {
-    text-align: center;
-    margin-top: 50px;
+/* Ensure the page takes up full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 
+/* Main content area to push footer to the bottom */
+.main-content {
+    flex: 1;
+}
+
+/* Styling for social links */
+.socials {
+    text-align: center;
+    background-color: #f8f8f8; /* Background for visibility */
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for individual social links */
 .socials a {
     margin: 0 10px;
     color: #333;
@@ -84,12 +103,9 @@ body {
     text-decoration: none;
 }
 
+/* Position the footer at the bottom */
 .footer {
     text-align: center;
     padding: 20px;
     background-color: #e0e0e0;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    left: 0;
 }

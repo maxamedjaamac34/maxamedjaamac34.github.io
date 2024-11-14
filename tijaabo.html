@@ -79,7 +79,29 @@
             margin-top: 50px;
         }
 
-/* Keep the styling for each social link */
+/* Ensure the page takes up full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content area to push footer to the bottom */
+.main-content {
+    flex: 1;
+}
+
+/* Styling for social links */
+.socials {
+    text-align: center;
+    background-color: #f8f8f8; /* Background for visibility */
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for individual social links */
 .socials a {
     margin: 0 10px;
     color: #333;
@@ -87,27 +109,13 @@
     text-decoration: none;
 }
 
-/* Position the .socials div at the bottom of the page */
-.socials {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+/* Position the footer at the bottom */
+.footer {
     text-align: center;
-    background-color: #f8f8f8; /* Optional: gives a background color */
-    padding: 10px 0; /* Optional: adds some space around the links */
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow for separation */
+    padding: 20px;
+    background-color: #e0e0e0;
 }
 
-
-        .footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #e0e0e0;
-            position: absolute;
-            width: 100%;
-            bottom: 0;
-            left: 0;
-        }
     </style>
 </head>
 
@@ -125,7 +133,8 @@
             <li><a href="projects.html">Projects</a></li>
         </ul>
     </div>
-
+    <div class="main-content">
+        
     <!-- Main Content -->
     <div class="container">
         <div class="profile-pic">
@@ -137,6 +146,7 @@
         </div>
     </div>
 
+    </div>
     <!-- Socials -->
     <div class="socials">
         <a href="https://github.com" target="https://github.com/maxamedjaamac34">GitHub</a>
